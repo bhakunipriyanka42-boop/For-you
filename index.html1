@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 320px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: #ff5c8a;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      margin: 20px 0;
+    }
+
+    button {
+      background-color: #ff5c8a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Hey You 💌</h1>
+    <p id="message">I made something small for you.</p>
+    <button onclick="nextMessage()">Tap here</button>
+  </div>
+
+  <script>
+    let messages = [
+      "I made something small for you.",
+      "Because you matter to me.",
+      "We’ve had ups and downs, I know.",
+      "But I still believe in us.",
+      "This new year feels like a chance.",
+      "A fresh start. A new try.",
+      "If you’re willing…",
+      "Let’s start again, together 💖"
+    ];
+
+    let index = 0;
+
+    function nextMessage() {
+      index++;
+      if (index < messages.length) {
+        document.getElementById("message").innerText = messages[index];
+      }
+    }
+  </script>
+
+</body>
+</html>
